@@ -25,3 +25,5 @@ This is a Laravel-based web application for managing a short movie festival. The
 
 ```bash
 git clone https://github.com/yourusername/your-repo.git
+
+
