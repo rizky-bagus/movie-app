@@ -30,12 +30,10 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::get('movies/search', 'Api\MovieController@searchMovies');
     Route::post('movies/{id}/track-viewership', 'Api\MovieController@trackViewership');
 
-    // Route::middleware('auth:api')->group(function () {
-        Route::post('votes/{movieId}', 'Api\VoteController@voteMovie');
-        Route::delete('votes/{movieId}', 'Api\VoteController@unvoteMovie');
-        Route::get('votes', 'Api\VoteController@userVotedMovies');
-        Route::get('votes/most-voted', 'Api\VoteController@mostVoted');
-        Route::get('votes/most-voted-genre', 'Api\VoteController@mostVotedGenre');
-    // });
+    Route::post('votes/{movieId}', 'Api\VoteController@voteMovie');
+    Route::delete('votes/{movieId}', 'Api\VoteController@unvoteMovie');
+    Route::get('votes', 'Api\VoteController@userVotedMovies');
+    Route::get('votes/most-voted', 'Api\VoteController@mostVoted');
+    Route::get('votes/most-voted-genre', 'Api\VoteController@mostVotedGenre');
 
 });
